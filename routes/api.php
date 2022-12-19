@@ -14,3 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::post('/upload-file', [App\Http\Controllers\Controller::class, 'uploadFile']);
+Route::fallback(function () {
+    abort(404);
+});
